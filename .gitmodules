@@ -3,5 +3,5 @@
 	url = https://github.com/linux-rdma/rdma-core.git
 [submodule "dpdk"]
 	path = dpdk
-	url = https://github.com/DPDK/dpdk.git
+	url = https://github.com/HaileThomas/dpdk.git
 	branch = 24.11
