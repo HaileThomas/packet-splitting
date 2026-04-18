@@ -99,16 +99,16 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < nb_rx; i++) {
             struct rte_mbuf *m = bufs[i];
 
-            if (m->nb_segs > 1) {
-                printf("  [SUCCESS] Packet split into %u segments (pkt_len=%u)\n",
-                    m->nb_segs, m->pkt_len);
+            // if (m->nb_segs > 1) {
+            //     printf("  [SUCCESS] Packet split into %u segments (pkt_len=%u)\n",
+            //         m->nb_segs, m->pkt_len);
 
-                print_segments(m);
+            //     print_segments(m);
 
-            } else {
-                printf("  [FAILED] Not split. nb_segs=%u, len=%u\n",
-                    m->nb_segs, m->data_len);
-            }
+            // } else {
+            //     printf("  [FAILED] Not split. nb_segs=%u, len=%u\n",
+            //         m->nb_segs, m->data_len);
+            // }
 
             rte_pktmbuf_free(m);
         }

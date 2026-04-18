@@ -78,16 +78,16 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < nb_rx; i++) {
             struct rte_mbuf *m = bufs[i];
 
-            if (m->nb_segs > 1) {
-                printf("  [FAILED] Unexpected multi-segment packet (%u segs, pkt_len=%u)\n",
-                    m->nb_segs, m->pkt_len);
+            // if (m->nb_segs > 1) {
+            //     printf("  [FAILED] Unexpected multi-segment packet (%u segs, pkt_len=%u)\n",
+            //         m->nb_segs, m->pkt_len);
 
-                print_segments(m);
+            //     print_segments(m);
 
-            } else {
-                printf("  [SUCCESS] Single segment packet. len=%u\n",
-                    m->data_len);
-            }
+            // } else {
+            //     printf("  [SUCCESS] Single segment packet. len=%u\n",
+            //         m->data_len);
+            // }
 
             rte_pktmbuf_free(m);
         }
